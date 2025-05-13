@@ -1,0 +1,144 @@
+$primary: #2C3E50;
+$secondary: #1ABC9C;
+$accent: #F1C40F;
+$light-bg: #ECF0F1;
+$dark-text: #333;
+$light-text: #fff;
+
+.contact-section {
+    background-color: $primary;
+    color: white;
+    
+    h2 {
+      color: white;
+      
+      &::after {
+        background: $accent;
+      }
+    }
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+    &:hover {
+      color: $accent;
+    }
+    
+    i {
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    .social-icon {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+      
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+  
+  .contact-form {
+    .form-group {
+      margin-bottom: 1.5rem;
+      
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      
+      input, textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.9);
+        transition: background 0.3s;
+        
+        &:focus {
+          background: white;
+          outline: 2px solid $accent;
+        }
+      }
+      
+      .error-message {
+        color:red;
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+      }
+    }
+    
+    .submit-btn {
+      background: $accent;
+      color: $primary;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+      
+      &:hover {
+        background: $accent;
+        transform: translateY(-2px);
+      }
+      
+      &:disabled {
+        background: $primary;
+        
+        cursor: not-allowed;
+      }
+    }
+    
+    .success-message {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba($secondary, 0.2);
+      border-left: 4px solid $secondary;
+      border-radius: 0 4px 4px 0;
+    }
+  }

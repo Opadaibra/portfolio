@@ -1,0 +1,138 @@
+$primary: #2C3E50;
+$secondary: #1ABC9C;
+$accent: #F1C40F;
+$light-bg: #ECF0F1;
+$dark-text: #333;
+$light-text: #fff;
+
+
+.experience-section {
+    background-color: $light-bg;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: $secondary;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+  }
+  
+  .timeline-item {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  
+    &:nth-child(odd) {
+      left: 0;
+      padding-right: 4rem;
+      text-align: right;
+    }
+  
+    &:nth-child(even) {
+      left: 50%;
+      padding-left: 4rem;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: $secondary;
+      border-radius: 50%;
+      top: 1.5rem;
+      z-index: 1;
+    }
+  
+    &:nth-child(odd)::after {
+      right: -10px;
+    }
+  
+    &:nth-child(even)::after {
+      left: -10px;
+    }
+  }
+  
+  .timeline-date {
+    color: $accent;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    h3 {
+      margin-top: 0;
+      color: $primary;
+    }
+    
+    .job-title {
+      color: $secondary;
+      font-weight: normal;
+    }
+    
+    ul {
+      padding-left: 1rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: $secondary;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    
+   
+    
+    i {
+      margin-left: 0.3rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline {
+      &::before {
+        left: 2rem;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 5rem;
+        padding-right: 1rem;
+        text-align: left !important;
+        
+        &:nth-child(odd),
+        &:nth-child(even) {
+          left: 0;
+        }
+        
+        &::after {
+          left: 1rem !important;
+        }
+      }
+    }
+  }

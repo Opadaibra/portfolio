@@ -1,0 +1,88 @@
+$primary: #2C3E50;
+$secondary: #1ABC9C;
+$accent: #F1C40F;
+$light-bg: #ECF0F1;
+$dark-text: #333;
+$light-text: #fff;
+
+.education-section {
+    background-color: $light-bg;
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  
+  .education-card, .languages-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    h2 {
+      text-align: left;
+      
+      &::after {
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+  
+  .degree {
+    h3 {
+      color: $primary;
+      margin-bottom: 0.5rem;
+    }
+    
+    .institution {
+      font-weight: 600;
+      color: $secondary;
+      margin-bottom: 0.3rem;
+    }
+    
+    .date {
+      font-style: italic;
+    }
+  }
+  
+  .language {
+    margin-bottom: 1.5rem;
+    
+    .language-name {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: $primary;
+    }
+    
+    .proficiency-bar {
+      height: 8px;
+      background: $light-bg;
+      border-radius: 4px;
+      position: relative;
+      margin-bottom: 0.3rem;
+      
+      .proficiency-level {
+        height: 100%;
+        border-radius: 4px;
+        background: $secondary;
+        position: relative;
+      }
+      
+      .proficiency-label {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        font-size: 0.8rem;
+      }
+    }
+  }

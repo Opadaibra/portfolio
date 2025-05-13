@@ -1,0 +1,23 @@
+<section class="education-section">
+    <div class="container">
+      <div class="education-card">
+        <h2>Education</h2>
+        <div class="degree">
+          <h3>{{ education.degree }}</h3>
+          <p class="institution">{{ education.institution }}</p>
+          <p class="date">{{ education.date }}</p>
+        </div>
+      </div>
+      
+      <div class="languages-card">
+        <h2>Languages</h2>
+        <div class="language" *ngFor="let lang of languages">
+          <span class="language-name">{{ lang.name }}</span>
+          <div class="proficiency-bar">
+            <div class="proficiency-level" [style.width.%]="lang.proficiency"></div>
+            <span class="proficiency-label">{{ lang.level }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

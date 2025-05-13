@@ -1,0 +1,142 @@
+$primary: #2C3E50;
+$secondary: #1ABC9C;
+$accent: #F1C40F;
+$light-bg: #ECF0F1;
+$dark-text: #333;
+$light-text: #fff;
+
+
+.skills-section {
+    background-color: transparent;
+    padding: 4rem 2rem;
+  
+    h2 {
+      margin-bottom: 3rem;
+    }
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skill-category {
+    background: $light-bg;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  
+    h3 {
+      color: $primary;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: $secondary;
+      }
+    }
+  }
+  
+  .skill {
+    margin-bottom: 1.5rem;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  
+    .skill-name {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: $primary;
+    }
+  
+    .skill-bar {
+      height: 10px;
+      background: $light-bg;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+  
+      .skill-level {
+        height: 100%;
+        border-radius: 5px;
+        background: $secondary;
+        position: relative;
+        transition: width 1.5s ease-in-out;
+  
+        &::after {
+          content: attr(data-level);
+          position: absolute;
+          right: 5px;
+          top: -20px;
+          font-size: 0.7rem;
+          font-weight: 600;
+          color: $secondary;
+        }
+      }
+    }
+  }
+  
+  /* Animation for skill bars when they come into view */
+  @keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--final-width); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .skill-category {
+      padding: 1.2rem;
+    }
+  }
+  
+  /* Dark mode support */
+  .dark-theme {
+    .skills-section {
+      background-color:$primary
+      
+      h2 {
+        color: white;
+      }
+    }
+  
+    .skill-category {
+      
+      h3 {
+        color: white;
+      }
+    }
+  
+    .skill {
+      .skill-name {
+        color: $accent
+      }
+  
+      .skill-bar {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }

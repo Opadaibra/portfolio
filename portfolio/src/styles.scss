@@ -1,0 +1,86 @@
+// Color variables
+$primary: #2C3E50;
+$secondary: #1ABC9C;
+$accent: #F1C40F;
+$light-bg: #ECF0F1;
+$dark-text: #333;
+$light-text: #fff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Prevent elements from being hidden before AOS initializes */
+[aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* AOS will override these styles when it initializes */
+.aos-init {
+  opacity: 0;
+}
+// Base styles
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: $dark-text;
+  margin: 0;
+  padding: 0;
+  background-color:#eef6f8;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: $primary;
+  text-align: center;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: $secondary;
+  }
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  &.primary {
+    background: $secondary;
+    color: white;
+    
+    &:hover {
+      background: $secondary;
+    }
+  }
+  
+  &.secondary {
+    border: 2px solid $secondary;
+    color: $secondary;
+    
+    &:hover {
+      background: $secondary;
+      color: white;
+    }
+  }
+}
