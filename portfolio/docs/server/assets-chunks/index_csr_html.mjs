@@ -1,9 +1,9 @@
-<!doctype html>
+export default `<!doctype html>
 <html lang="en" data-beasties-container="">
 <head>
   <meta charset="utf-8">
   <title>Portfolio</title>
-  <base href="https://github.com/Opadaibra/portfolio">
+  <base href="/portfolio/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
@@ -12,3 +12,4 @@
   <app-root></app-root>
 <script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-XDEMMQVM.js" defer=""></script><script src="main-RVMJCC6Q.js" type="module"></script></body>
 </html>
+`;

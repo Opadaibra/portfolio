@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://github.com/Opadaibra/portfolio',
+  basePath: '/portfolio',
   supportedLocales: {
   "en-US": ""
 },
