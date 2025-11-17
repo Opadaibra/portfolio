@@ -23,10 +23,10 @@ export class AppComponent {
   }
 
   downloadCV() {
-    // يمكنك إضافة منطق تحميل السيرة الذاتية هنا
     const link = document.createElement('a');
-    link.href = 'path-to-your-cv.pdf';
-    link.download = 'Obada_Ibrahim_CV.pdf';
+    link.href = 'assets/fr-obada-ibrahim.pdf';
+    link.download = 'fr-obada-ibrahim.pdf';
     link.click();
   }
+  
 }
