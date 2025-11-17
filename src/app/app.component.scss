@@ -489,6 +489,7 @@ section {
 
 .timeline-item:nth-child(even) .timeline-date {
     left: -18vw;
+    z-index: 1;
 }
 
 .timeline-content {
