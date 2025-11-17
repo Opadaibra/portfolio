@@ -22,11 +22,6 @@ export class AppComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  downloadCV() {
-    const link = document.createElement('a');
-    link.href = 'assets/fr-obada-ibrahim.pdf';
-    link.download = 'fr-obada-ibrahim.pdf';
-    link.click();
-  }
+  
   
 }
